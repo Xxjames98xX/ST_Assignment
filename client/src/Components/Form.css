@@ -1,0 +1,35 @@
+.input-label {
+  font-weight: 600;
+}
+
+/*New line*/
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*Increase box size*/
+.Box {
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 1.2rem;
+}
+
+/*Extra Container*/
+.Form {
+  max-width: 800px;
+  min-width: 800px;
+  padding: 32px 24px;
+  border-radius: 8px;
+  background: #5c6b82;
+}
+
+/* Style the date picker input */
+.input-container .react-datepicker-wrapper input {
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  width: 120px;
+}

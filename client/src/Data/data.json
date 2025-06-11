@@ -1,0 +1,84 @@
+{
+  "Accounting and Corporate Regulatory Authority (ACRA)": [
+    { "entity_type": "Limited Partnership", "indicator": "LP" },
+    { "entity_type": "Limited Liability Partnerships", "indicator": "LL" },
+    { "entity_type": "Foreign Companies", "indicator": "FC" },
+    { "entity_type": "Public Accounting Firms", "indicator": "PF" }
+  ],
+  "Enterprise Singapore (ESG)": [
+    {
+      "entity_type": "Representative Offices of Foreign ...",
+      "indicator": "RF"
+    }
+  ],
+  "Islamic Religious Council of Singapore Majlis Ugama Islam Singapura (MUIS)": [
+    { "entity_type": "Mosques", "indicator": "MQ" },
+    { "entity_type": "Madrasahs", "indicator": "MM" }
+  ],
+  "Ministry of Communications and Information (MCI)": [
+    { "entity_type": "News Bureaus", "indicator": "NB" }
+  ],
+  "Ministry of Culture, Community and Youth Charities Unit": [
+    {
+      "entity_type": "Charities and Institutions of a Public Character",
+      "indicator": "CC"
+    }
+  ],
+  "Ministry of Culture, Community and Youth - Registries of Co-operative Societies": [
+    { "entity_type": "Cooperative Societies", "indicator": "CS" }
+  ],
+  "Ministry of Culture, Community and Youth - Registry of Mutual Benefit Organisation": [
+    { "entity_type": "Mutual Benefit Organisations", "indicator": "MB" }
+  ],
+  "Ministry of Defence": [
+    { "entity_type": "Foreign Military Units", "indicator": "FM" }
+  ],
+  "Ministry of Education": [
+    { "entity_type": "Government and Government-Aided Schools", "indicator": "GS" }
+  ],
+  "Ministry of Foreign Affairs": [
+    { "entity_type": "High Commissions, Embassies", "indicator": "DP" },
+    { "entity_type": "Consulate", "indicator": "CP" },
+    { "entity_type": "International Organisations", "indicator": "NR" }
+  ],
+  "Ministry of Health": [
+    { "entity_type": "Only Medical Clinic", "indicator": "CM" },
+    { "entity_type": "Only Dental Clinic", "indicator": "CD" },
+    { "entity_type": "Both Medical and Dental Clinic", "indicator": "MD" },
+    { "entity_type": "Hospitals", "indicator": "HS" },
+    { "entity_type": "Voluntary Welfare Home", "indicator": "VH" },
+    { "entity_type": "Commercial Home", "indicator": "CH" },
+    { "entity_type": "Maternity Home", "indicator": "MH" },
+    { "entity_type": "Clinical Laboratory", "indicator": "CL" },
+    { "entity_type": "Xray Laboratory", "indicator": "XL" },
+    { "entity_type": "Both Clinical and Xray Laboratory", "indicator": "CX" }
+  ],
+  "Ministry of Law": [
+    { "entity_type": "Foreign Law Practice Representative Offices", "indicator": "RP" }
+  ],
+  "Ministry of Manpower": [
+    { "entity_type": "Trade Unions", "indicator": "TU" }
+  ],
+  "Ministry of National Development": [
+    { "entity_type": "Town Councils", "indicator": "TC" }
+  ],
+  "Monetary Authority of Singapore": [
+    { "entity_type": "Bank Representative Offices", "indicator": "FB" },
+    { "entity_type": "Insurance Representative Offices", "indicator": "FN" }
+  ],
+  "People's Association": [
+    { "entity_type": "PA Services", "indicator": "PA" },
+    { "entity_type": "Grassroot Units", "indicator": "PB" }
+  ],
+  "Registry of Societies": [
+    { "entity_type": "Societies", "indicator": "SS" }
+  ],
+  "Singapore Land Authority": [
+    { "entity_type": "Management Corporations", "indicator": "MC" },
+    { "entity_type": "Subsidiary Management Corporations", "indicator": "SM" }
+  ],
+  "Smart Nation and Digital Government Office": [
+    { "entity_type": "Organs of State, Ministries and Departments", "indicator": "GA" },
+    { "entity_type": "Statutory Boards and Bodies Performing Public Duties", "indicator": "GB" }
+  ]
+}
