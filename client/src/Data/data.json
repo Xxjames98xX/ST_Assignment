@@ -1,8 +1,10 @@
 {
-  "Accounting and Corporate Regulatory Authority (ACRA)": [
+  "ACRA": [
+    { "entity_type": "Local Company", "indicator": "None"},
+    { "entity_type": "Sole Proprietorship/ Partnership", "indicator": "None"},
     { "entity_type": "Limited Partnership", "indicator": "LP" },
-    { "entity_type": "Limited Liability Partnerships", "indicator": "LL" },
-    { "entity_type": "Foreign Companies", "indicator": "FC" },
+    { "entity_type": "Limited Liability Partnership", "indicator": "LL" },
+    { "entity_type": "Foreign Company Branch", "indicator": "FC" },
     { "entity_type": "Public Accounting Firms", "indicator": "PF" }
   ],
   "Enterprise Singapore (ESG)": [

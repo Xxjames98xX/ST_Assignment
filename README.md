@@ -12,3 +12,6 @@
    ```
 
 3. The app should open automatically at http://localhost:3000
+
+**Updates:**
+<br> Updated .... 

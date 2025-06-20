@@ -83,13 +83,19 @@ function UENChecker() {
       return;
     }
 
-    //For pre-2009 registrations
-    if (Year < 2009) { 
-      errors = pre2009UENCheck();
+    //For Local Companies, 10 digits UEN
+    if (Entity.label === 'Local Company')
+    {
+      errors = localCompanyCheck();
     }
-    //For post-2009 registrations
-    else{
-      errors = post2009UENCheck();
+    //For Sole Proprietorship/Partnership, 9 digits UEN
+    else if (Entity.label === 'Sole Proprietorship/ Partnership')
+    {
+      errors = solePropPartnershipCheck();
+    }
+    else
+    {
+      errors = newUENCheck()
     }
 
     if (errors.length > 0) {
@@ -100,40 +106,38 @@ function UENChecker() {
     }
   }
 
-  function pre2009UENCheck(){
+  function solePropPartnershipCheck() {
     let errors = [];
-
-    if (UEN.length < 9) {
-      errors.push('Year of Issuance before 2009, Minimum 9 digits');
+    const regex = /^[0-9]{8}[A-Z]$/;
+    if (!regex.test(UEN)) {
+      errors.push('Invalid UEN format e.g nnnnnnnnX (9 digits)');
     }
-
-    //Businesses registered with ACRA
-    if (UEN.length === 9) {
-      const regex = /^[0-9]{8}[A-Z]$/;
-      if (!regex.test(UEN)) {
-        errors.push('Invalid UEN format e.g nnnnnnnnX');
-      }
-    }
-
-    //Local Companies registered with ACRA, additional check for year
-    if (UEN.length === 10) {
-      const regex = /^[0-9]{9}[A-Z]$/;
-      const YearPrefix = UEN.toString().slice(0, 4);
-      if (!regex.test(UEN)) {
-        errors.push('Invalid UEN format e.g YYYYnnnnnX');
-      } 
-      else if (YearPrefix !== Year.toString()) {
-        errors.push(`UEN first four digits: "${YearPrefix}" does not match the year of issuance: "${Year}"`);
-      }
-    }
-
     return errors;
   }
 
-  function post2009UENCheck() {
+  function localCompanyCheck() {
     let errors = [];
-    if (UEN.length < 10) {
-      errors.push('Year of Issuance after 2009, Minimum 10 digits');
+
+    const regex = /^[0-9]{9}[A-Z]$/;
+    const YearPrefix = UEN.toString().slice(0, 4);
+    if (!regex.test(UEN)) {
+      errors.push('Invalid UEN format e.g YYYYnnnnnX (10 digits)');
+    } 
+    
+    if (YearPrefix !== Year.toString()) {
+      errors.push(`UEN first four digits: "${YearPrefix}" does not match the year of issuance: "${Year}"`);
+    }
+    
+    return errors;
+  }
+
+  function newUENCheck() {
+    let errors = [];
+
+    //Need to ensure it makes the correct format "TyyPQnnnnX"
+    const regex = /^[A-Z][0-9]{2}[A-Z]{2}[0-9]{4}[A-Z]$/;
+    if (!regex.test(UEN)) {
+      errors.push('Invalid UEN format. It should be in the format "TyyPQnnnnX"');
     }
 
     //Checking for "Tyy" Format
@@ -151,12 +155,6 @@ function UENChecker() {
     if (UENIndicator!==validIndicator)
     {
       errors.push(`Incorrect Indicator "${UENIndicator}", correct indicator should be "${validIndicator}"`)
-    }
-
-    //Need to ensure it makes the correct format "TyyPQnnnnX"
-    const regex = /^[A-Z][0-9]{2}[A-Z]{2}[0-9]{4}[A-Z]$/;
-    if (!regex.test(UEN)) {
-      errors.push('Invalid UEN format. It should be in the format "TyyPQnnnnX"');
     }
     
     return errors;
